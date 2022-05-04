@@ -1,0 +1,33 @@
+extends layout
+block content
+  body 
+    .gameTitle
+      h Lehigh Valley BlackJack
+    .hand1#dealer_hand
+    .ui.basic.modal
+      .header Would you like to play some BlackJack?
+      .content
+        p Play at your own discretion! You have been warned!
+      .actions
+        .ui.approve.button(id = "dealButton" onclick='deal()') Deal cards
+    .grid-container
+      .grid-item
+      .grid-item
+      .grid-item
+        p(id = "dealerScore") Dealer Score: 0 
+      .grid-item
+      .grid-item
+         img(src='https://cdn.shopify.com/s/files/1/0519/4049/1443/products/CardBackEtsy_1024x1024.png?v=1630956100' alt='Facedown Card')
+      .grid-item
+      .grid-item
+        .hitmebutton
+          .ui.green.button(id = "hitmeButton" onclick='hitMe()')
+            |   Hit Me
+        .staybutton
+          .ui.yellow.button(id = "stayButton" onclick='stay()')
+            |   Stay
+            br
+      .grid-item
+      .grid-item 
+        p(id = "userScore") User Score: 0 
+    .hand2#user_hand
