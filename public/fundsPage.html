@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add funds Page</title>
+    <link rel='stylesheet' href='./stylesheets/style.css'>
+    <script src="./javascripts/main.js"></script>
+     
+</head>
+<body>
+
+    <header>
+        <h1> Add Funds </h1>
+    </header>
+
+
+  <div class="mainOptions">
+    <button id = "add100" onclick='add100()'> Add $100 </button>
+    <button id = "add1000" onclick='add1000()'> Add $1,000 </button>
+    <button id = "add10000" onclick='add10000()'> Add $10,000 </button>
+    <form class="fundAmount">
+        <label for="fund"> Custom </label>
+        <input type="text" id="fund" name="fund"> <button type="submit" id="submitFund" onclick='addCustom()'> Submit </button>
+    </form>
+    <button class = "back" onclick='back()'> Back</button>
+  </div>
+    
+</body>
+</html>
