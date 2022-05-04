@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.sendFile('index.html', { root: path.join(__dirname, '../public') });
+  console.log("Starting program.");
+});
+
+module.exports = router;
