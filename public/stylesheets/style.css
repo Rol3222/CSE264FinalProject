@@ -16,7 +16,7 @@ header {
   margin-top: -100px;
 }
 
-.userInfo, .mainOptions {
+.userInfo, .mainOptions, #balance {
   margin: auto;
   display: block;
   width: 32%;
@@ -32,7 +32,7 @@ footer {
   background-color: #ed964c;
 }
 
-#loginButton, #portfolioButton, #fundsButton, #signout, #investButton {
+#loginButton, #portfolioButton, #fundsButton, #signout, #investButton, #add100, #add1000, #add10000, .back, #submitFund {
   margin: auto;
   display: block;
   width: 32%;
@@ -90,6 +90,11 @@ input {
   font-size:24px;
 }
 
+#balance {
+  color: white;
+  font-size:24px;
+}
+
 label {
   color: white;
   font-size: 24px;
@@ -109,23 +114,22 @@ label {
     cursor:pointer;
   }
   
-  .infoSubmit:hover {
+  .infoSubmit:hover, #portfolioButton:hover, #fundsButton:hover, #signout:hover, #investButton:hover, #add100:hover, #add1000:hover, #add10000:hover, .back:hover, #submitFund:hover {
     background-color: #FAA500;
   }
   
-  .infoSubmit:active {
+  .infoSubmit:active, #portfolioButton:active, #fundsButton:active, #signout:active, #investButton:active, #add100:active, #add1000:active, #add10000:active, .back:active, #submitFund:active {
     background-color: #ed964c;
     transform: translateY(5px);
   }
 
-  #portfolioButton, #fundsButton, #signout, #investButton {
+  p {
+    font-size: 18px;
+    color: white;
+  }
+
+  #portfolioButton, #fundsButton, #signout, #investButton, #add100, #add1000, #add10000, .back, #submitFund {
     width: 250px !important;
     height: 100px !important;
   }
 
-
-
-
-div {
-  
-}
