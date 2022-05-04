@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Front Page</title>
+  <title>Main Page</title>
     <link rel='stylesheet' href='./stylesheets/style.css'>
     <script src="./javascripts/main.js"></script>
      
@@ -13,12 +13,14 @@
         <h1> Welcome</h1>
     </header>
 
+    <label for="balance" id="balance">Balance: </label>
+
 
   <div class="mainOptions">
-    <button id = "portfolioButton"> Portfolio </button>
-    <button id = "investButton"> Invest </button>
-    <button id = "fundsButton"> Add Funds </button>
-    <button id = "signout" onclick = 'signout()'> Sign Out </button>
+    <button id = "portfolioButton" onclick='portfolioPage()'> Portfolio </button>
+    <button id = "investButton" onclick='investPage()'> Invest </button>
+    <button id = "fundsButton" onclick='fundsPage()'> Add Funds </button>
+    <button id = "signout" onclick='signout()'> Sign Out </button>
   </div>
     
 </body>
