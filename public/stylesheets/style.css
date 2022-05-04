@@ -1,0 +1,131 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #4353ed;
+  height: 20%;
+}
+
+header {
+  background-color: #ed964c;
+  font-family: American Typewriter, serif;
+  font-size: 64px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  border-radius: 30px;
+  margin-top: -100px;
+}
+
+.userInfo, .mainOptions {
+  margin: auto;
+  display: block;
+  width: 32%;
+}
+
+.logo {
+  margin: auto;
+  display: block;
+  width: 32%;
+}
+
+footer {
+  background-color: #ed964c;
+}
+
+#loginButton, #portfolioButton, #fundsButton, #signout, #investButton {
+  margin: auto;
+  display: block;
+  width: 32%;
+  border-radius: 25px;
+  height: 75px;
+  font-size: 36px;
+  text-align:center;
+  margin-top: 30px;
+  font-family: Andale Mono, monospace;
+  font-weight: bold;
+  color: white;
+  background-color: #ed964c;
+  cursor:pointer;
+}
+
+#loginButton:hover {
+  background-color: #FAA500;
+}
+
+#loginButton:active {
+  background-color: #ed964c;
+  transform: translateY(5px);
+}
+
+#registerButton {
+  margin: auto;
+  display: block;
+  width: 32%;
+  border-radius: 25px;
+  height: 75px;
+  font-size: 36px;
+  text-align:center;
+  margin-top: 25px;
+  font-family: Andale Mono, monospace;
+  font-weight: bold;
+  color: white;
+  background-color: #ed964c;
+  cursor:pointer;
+}
+
+#registerButton:hover {
+  background-color: #FAA500;
+}
+
+#registerButton:active {
+  background-color: #ed964c;
+  transform: translateY(5px);
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  margin-top:5px;
+  margin-bottom:5px;
+  font-size:24px;
+}
+
+label {
+  color: white;
+  font-size: 24px;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.infoSubmit {
+    margin: auto;
+    display: block;
+    width: 32%;
+    height: 75px;
+    border-radius:25px;
+    background-color: #ed964c;
+    color: white;
+    font-size: 36px;
+    cursor:pointer;
+  }
+  
+  .infoSubmit:hover {
+    background-color: #FAA500;
+  }
+  
+  .infoSubmit:active {
+    background-color: #ed964c;
+    transform: translateY(5px);
+  }
+
+  #portfolioButton, #fundsButton, #signout, #investButton {
+    width: 250px !important;
+    height: 100px !important;
+  }
+
+
+
+
+div {
+  
+}
