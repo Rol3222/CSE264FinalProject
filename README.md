@@ -1,3 +1,17 @@
+SITE CAN BE FOUND HERE:
+https://dunder-cryptlin.netlify.app/public/index.html
+
+Can be run from desktop
+- Go to folder
+in terminal type: npm i
+then type: npm run dev
+
+- Go to localhost:3000 on a chrome browser
+
+API key: 70c6f8db2e19eed0773985636110fb26690097d0
+https://api.nomics.com/v1/markets?key=your-key-here
+
+
 # Final Project
 
 ## Due Last day of Class
@@ -43,6 +57,6 @@ There are a lot of ways to take this project so the basic idea is that it would 
 
 Technologically speaking, the users would be brought to a page with several different options to login, buy, sell, browse…etc. HTML, CSS, and JS are going to need to work together with a MongoDB server to keep track of changes made to the database. 
 
-I was thinking of adding animations using Angular/Vue or some other framework. In terms of the stack I'm going to use node.js and connect to the Crypto Asset Tickers api to get ticket data and https://cryptoapis.io/ to get historical data on each currency. I can also implement an actual exchange of funds by connecting to another exchange. 
+I was thinking of adding animations using Angular/Vue or some other framework. In terms of the stack I'm going to use node.js and connect to the Crypto Asset Tickers api to get ticket data and nomics.com to get historical data on each currency. I can also implement an actual exchange of funds by connecting to another exchange. 
 
 Using HTML and CSS I plan on creating a few basic pages (login page, buy/sell, search, and information pages) and animating them using js. On the back-end I plan on using MongoDB to keep track of user data such as username, balance, and currencies. When the project is complete I want to host it on AWS servers for anyone to use.
