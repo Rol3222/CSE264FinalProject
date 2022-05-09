@@ -5,6 +5,11 @@ body {
   height: 20%;
 }
 
+h2 {
+  color: white;
+  font-size: 24px;
+}
+ 
 header {
   background-color: #ed964c;
   font-family: American Typewriter, serif;
