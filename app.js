@@ -10,19 +10,29 @@ var indexRouter = require('./routes/index');
 
 
 //dotenv.config({ path: '.env.example' });
-//dotenv.config({ path: '.env' });
+dotenv.config({ path: '.env' });
 
 var app = express();
 
-/**
- * Connect to MongoDB.
- 
-mongoose.Promise = global.Promise;
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+//Connect to MongoDB.
+ 
+//mongoose.Promise = global.Promise;
+/*
+const mongo_url = process.env.MongoDB_URI || 'mongodb://localhost:27017/mongodb://jrl222:FUJIman23456@cse264project-shard-00-00.hb5zo.mongodb.net:27017,cse264project-shard-00-01.hb5zo.mongodb.net:27017,cse264project-shard-00-02.hb5zo.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-otsngu-shard-0&authSource=admin&retryWrites=true&w=majority';
+try{
+  mongoose.connect(mongo_url, { useNewUrlParser: true });
+  console.log("Connected to MongoDB. Goodjob!");
+
+}
+catch(error){
+  console.log("MongoDB Error, not connecting");
+}
+//mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+/*
 mongoose.connection.on('error', (err) => {
   console.error(err);
-  console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
+  console.log('%s MongoDB connection error. Please make sure MongoDB is running.');
   process.exit();
 });
 */
