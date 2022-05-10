@@ -22,11 +22,14 @@ document.addEventListener('readystatechange', event => {
     }
     // When windows loaded
     if (event.target.readyState === "complete") {
-        if (document.URL.includes("mainpage") || document.URL.includes("mainPage.html")) {
+        if (document.URL.includes("/mainpage") || document.URL.includes("mainPage.html")) {
             userBalance = document.getElementById("balance");
             userBalance.textContent = "Balance: " + balance;
+            //("#date").text(moment().format('ddd MMM Do, YYY'));
+            date_field = document.getElementById("date")
+            date_field.textContent = "" + moment().format('MMMM Do YYYY, h:mm:ss a'); 
         }
-        if (document.URL.includes("investpage") || document.URL.includes("investPage.html") ) {
+        if (document.URL.includes("/investpage") || document.URL.includes("investPage.html") ) {
             var millisecondsToWait = 1000;
                 setTimeout(function() {
                     computePriceBTC();
