@@ -21,7 +21,7 @@ header {
   margin-top: -100px;
 }
 
-.userInfo, .mainOptions, #balance {
+.userInfo, .mainOptions, #balance, #date {
   margin: auto;
   display: block;
   width: 32%;
@@ -95,7 +95,7 @@ input {
   font-size:24px;
 }
 
-#balance {
+#balance, #date  {
   color: white;
   font-size:24px;
 }
