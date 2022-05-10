@@ -9,9 +9,9 @@ window.onload = function () {
  
 var balance = 0;
 
-fetch("https://api.nomics.com/v1/currencies/ticker?70c6f8db2e19eed0773985636110fb26690097d0&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR&platform-currency=ETH&per-page=100&page=1")
-  .then(response => response.json())
-  .then(data => console.log(data))
+//fetch("https://api.nomics.com/v1/currencies/ticker?70c6f8db2e19eed0773985636110fb26690097d0&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR&platform-currency=ETH&per-page=100&page=1")
+  //.then(response => response.json())
+  //.then(data => console.log(data))
 
 document.addEventListener('readystatechange', event => { 
     // When HTML is ready
@@ -79,19 +79,45 @@ async function computePriceBTC() {
     //let bitcoin = fetch("https://api.nomics.com/v1/currencies/ticker?key=70c6f8db2e19eed0773985636110fb26690097d0&ids=BTC&interval=1d,30d&page=1", {method: "GET"})
     //let bitcoin_data = await bitcoin.json;
     //var price = bitcoin_data.price;
-    var priceBTC;
+    //var priceBTC;
     //fetch("https://api.nomics.com/v1/currencies/ticker?key=70c6f8db2e19eed0773985636110fb26690097d0&ids=BTC&interval=1d,30d&page=1")
         //.then(response => response.json())
         //.then(data => price = data.price)
-    let bitcoin = fetch("https://api.nomics.com/v1/currencies/ticker?key=70c6f8db2e19eed0773985636110fb26690097d0&ids=BTC&interval=1d,30d&page=1", {method: "GET"})
-    let bitcoin_data = await bitcoin.json;
+    //let bitcoin = fetch("https://api.nomics.com/v1/currencies/ticker?key=70c6f8db2e19eed0773985636110fb26690097d0&ids=BTC&interval=1d,30d&page=1", {method: "GET"})
+    //let bitcoin_data = await bitcoin.json;
     //priceBTC = bitcoin_data.price;
     //price_label_BTC = document.getElementById("BTCprice");
     //price_label_BTC.textContent = "Price: " + priceBTC; 
+   //let BTCarray = []; //stores all crypto data for BTC
+    let price;
+
+    let BTC_URL = "https://api.nomics.com/v1/currencies/ticker?key=70c6f8db2e19eed0773985636110fb26690097d0&ids=BTC&interval=1d,30d&page=1";
+    fetch(BTC_URL)
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            price = data[0].price
+            console.log(price);
+            let price_label_BTC = document.getElementById("BTCprice");
+            price_label_BTC.textContent = "Price: " + price; 
+        })
 } 
 
 async function computePriceETH() {
-
+    let ETH_URL = "https://api.nomics.com/v1/currencies/ticker?key=70c6f8db2e19eed0773985636110fb26690097d0&ids=ETH&interval=1d,30d&page=1";
+    fetch(ETH_URL)
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            price = data[0].price 
+            console.log(price);
+            let price_label_ETH = document.getElementById("ETHprice");
+            price_label_ETH.textContent = "Price: " + price; 
+        })
 }
 
 function fundsPage() {
