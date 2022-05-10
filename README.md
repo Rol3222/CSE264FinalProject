@@ -14,6 +14,8 @@ https://api.nomics.com/v1/markets?key=your-key-here
 The API can only handle a certain number of calls in an allotted time, if numbers don't display that means
 the API server was overloaded, try again later.
 
+API calls are buggy on the host site, please run the code in this repo for full functionality. 5/9/22
+
 
 # Final Project
 
