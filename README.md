@@ -3,7 +3,8 @@ https://dunder-cryptlin.netlify.app/public/index.html
 
 Can be run from desktop
 - Go to folder
-in terminal type: npm i
+in terminal type: npm install moment --save 
+*This is important because you must install the moment library
 then type: npm run dev
 
 - Go to localhost:3000 on a chrome browser
