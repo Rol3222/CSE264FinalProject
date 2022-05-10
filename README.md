@@ -11,6 +11,9 @@ then type: npm run dev
 API key: 70c6f8db2e19eed0773985636110fb26690097d0
 https://api.nomics.com/v1/markets?key=your-key-here
 
+The API can only handle a certain number of calls in an allotted time, if numbers don't display that means
+the API server was overloaded, try again later.
+
 
 # Final Project
 
