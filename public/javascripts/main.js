@@ -25,8 +25,16 @@ document.addEventListener('readystatechange', event => {
             userBalance.textContent = "Balance: " + balance;
         }
         if (document.URL.includes("investpage") || document.URL.includes("investPage.html") ) {
-            computePriceBTC();
-            computePriceETH();
+            var millisecondsToWait = 1000;
+                setTimeout(function() {
+                    computePriceBTC();
+                }, millisecondsToWait);
+            //computePriceBTC();
+            //computePriceETH();
+            var millisecondsToWait2 = 1500;
+                setTimeout(function() {
+                    computePriceETH();
+                }, millisecondsToWait2);
         }
     }
 });
