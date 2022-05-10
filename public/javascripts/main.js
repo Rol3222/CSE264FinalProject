@@ -8,6 +8,8 @@ window.onload = function () {
 };
  
 var balance = 0;
+var BTCprice = 0;
+var ETHprice = 0;
 
 //fetch("https://api.nomics.com/v1/currencies/ticker?70c6f8db2e19eed0773985636110fb26690097d0&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR&platform-currency=ETH&per-page=100&page=1")
   //.then(response => response.json())
@@ -33,7 +35,7 @@ document.addEventListener('readystatechange', event => {
             //computePriceETH();
             var millisecondsToWait2 = 1500;
                 setTimeout(function() {
-                    computePriceETH();
+                    //computePriceETH();
                 }, millisecondsToWait2);
         }
     }
@@ -73,8 +75,8 @@ function portfolioPage() {
 
 function investPage() {
     location.href='./investPage.html';
-    computePriceBTC();
-    computePriceETH();
+    //computePriceBTC();
+    //computePriceETH();
     //let bitcoin = await fetch ("https://api.nomics.com/v1/currencies/ticker?key=70c6f8db2e19eed0773985636110fb26690097d0&ids=BTC&interval=1d,30d&convert=EUR&platform-currency=ETH&per-page=100&page=1", {method:"GET"})
     //let bitcoin_data = await bitcoin.json();
     //var price = bitcoin_data.price;
@@ -99,22 +101,26 @@ async function computePriceBTC() {
    //let BTCarray = []; //stores all crypto data for BTC
     let price;
 
-    let BTC_URL = "https://api.nomics.com/v1/currencies/ticker?key=70c6f8db2e19eed0773985636110fb26690097d0&ids=BTC&interval=1d,30d&page=1";
+    let BTC_URL = "https://api.nomics.com/v1/currencies/ticker?key=70c6f8db2e19eed0773985636110fb26690097d0&ids=BTC,ETH&interval=1d,30d&page=1";
     fetch(BTC_URL)
         .then(response => {
             return response.json();
         })
         .then(data => {
             console.log(data);
-            price = data[0].price
-            console.log(price);
+            BTCprice = data[0].price
+            ETHprice = data[1].price
+            console.log(BTCprice);
+            console.log(ETHprice);
             let price_label_BTC = document.getElementById("BTCprice");
-            price_label_BTC.textContent = "Price: " + price; 
+            price_label_BTC.textContent = "Price: " + BTCprice; 
+            let price_label_ETH = document.getElementById("ETHprice");
+            price_label_ETH.textContent = "Price: " + ETHprice; 
         })
 } 
 
 async function computePriceETH() {
-    let ETH_URL = "https://api.nomics.com/v1/currencies/ticker?key=70c6f8db2e19eed0773985636110fb26690097d0&ids=ETH&interval=1d,30d&page=1";
+    let ETH_URL = "https://api.nomics.com/v1/currencies/ticker?key=70c6f8db2e19eed0773985636110fb26690097d0&ids=ETH&interval=1d&page=1";
     fetch(ETH_URL)
         .then(response => {
             return response.json();
