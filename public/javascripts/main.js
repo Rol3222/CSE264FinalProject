@@ -20,11 +20,11 @@ document.addEventListener('readystatechange', event => {
     }
     // When windows loaded
     if (event.target.readyState === "complete") {
-        if (document.URL.includes("mainPage.html")) {
+        if (document.URL.includes("mainpage") || document.URL.includes("mainPage.html")) {
             userBalance = document.getElementById("balance");
             userBalance.textContent = "Balance: " + balance;
         }
-        if (document.URL.includes("investPage.html")) {
+        if (document.URL.includes("investpage") || document.URL.includes("investPage.html") ) {
             computePriceBTC();
             computePriceETH();
         }
